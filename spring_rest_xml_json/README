@@ -1,0 +1,3 @@
+This project shows how to get and post both xml and json response when required. Its a simple player information retrieval and adding module. POST request data is static here, and it is possible to supply both XML and JSON type request for both GET and POST and also recieve the response in both way. A simple REST client is also added. Static data has been used for now. In future it will be updated including some database operations. 
+
+Reference: http://www.codeproject.com/Articles/820877/Support-Both-Json-and-XML-Serializations-in-Spring
