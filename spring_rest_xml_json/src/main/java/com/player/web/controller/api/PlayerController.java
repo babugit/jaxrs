@@ -48,7 +48,7 @@ public class PlayerController {
 	public Player echoStudent(@RequestBody Player player,
 			HttpServletRequest request, HttpServletResponse response) {
 		
-		// Just echo the same student back
+		// Just echo the same player back
 		return player;
 	}
 }
