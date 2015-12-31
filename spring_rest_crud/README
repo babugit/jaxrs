@@ -1,0 +1,67 @@
+This project is a sample Spring REST CRUD application which focuses on RESTful Spring Web Services. Following features are added: get list of employees, get employee by id, add new employee, delete an existing employee. Mysql database is used for this sample project. The database name is employee_db and the only table name is employee. SQL is also added with this project. Log4j is used to log the requests in a log file named app_log.log which will can be configured from the log4j.properties file including in this project. 
+
+To test the services, I've used Advanced Rest Client Application, which is a popular REST client extension of Chrome browser.
+
+Reference: http://www.beingjavaguys.com/2014/08/spring-restful-web-services.html
+
+
+Sample GET Request and Response:
+
+Request: http://localhost:8080/spring_rest_crud/employee/list
+
+Response:
+
+[2]
+    -0:  {
+        "id": 2
+        "firstName": "Hoston"
+        "lastName": "lindey"
+        "email": "hl@gmail.com"
+        "phone": "90908989899"
+    }
+    -1:  {
+        "id": 4
+        "firstName": "Richard"
+        "lastName": "Levine"
+        "email": "richard.levine@biz.com"
+        "phone": "079300904"
+    }
+    
+Request: http://localhost:8080/spring_rest_crud/employee/2
+
+Response:
+
+    {
+        "id": 2
+        "firstName": "Hoston"
+        "lastName": "lindey"
+        "email": "hl@gmail.com"
+        "phone": "90908989899"
+    }
+    
+Request: http://localhost:8080/spring_rest_crud/employee/delete/4
+
+Response: 
+
+    {
+        "code": 1
+        "message": "Employee deleted Successfully !"
+    }
+
+
+Sample POST Request
+
+Request: http://localhost:8080/spring_rest_crud/employee/create
+
+Put a json request like the following in the Payload section and select the Raw option. Select Post method and you may also need to set the Header as Content-Type in Key and application/json in Value.
+
+{"firstName":"Richard","lastName":"Levine","email":"richard.levine@biz.com","phone":"079300904"}
+
+Response: 
+
+    {
+        "code": 1
+        "message": "Employee added Successfully !"
+    }
+
+
